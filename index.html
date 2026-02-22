@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram運用戦略レポート | 清水銘木様 2026年2月</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Zen Kaku Gothic New',sans-serif;background:#faf8f5;color:#2e2720;line-height:2;font-weight:300;letter-spacing:.03em;-webkit-font-smoothing:antialiased}
+
+:root{
+  --serif:'Shippori Mincho',serif;
+  --sans:'Zen Kaku Gothic New',sans-serif;
+  --display:'Cormorant Garamond',serif;
+  --text:#2e2720;--text-light:#5e4f3f;--text-muted:#8a7b6a;
+  --accent:#7a5c1f;--accent-light:#a07830;--accent-soft:#c9a35a;
+  --bg:#faf8f5;--bg-warm:#f3ece3;--bg-card:#fff;
+  --green:#2d6a4f;--red:#9b4444;--blue:#3d5a80;
+  --border:rgba(122,92,31,.1);
+  --shadow:0 2px 20px rgba(46,39,32,.06);
+  --shadow-lg:0 8px 40px rgba(46,39,32,.08);
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+
+/* === PRINT FRIENDLY === */
+@media print{
+  .nav,.nav-progress,.hero-scroll{display:none!important}
+  body{font-size:11pt;background:#fff}
+  .hero{min-height:auto;padding:4rem 2rem;background:#fff}
+  section{break-inside:avoid;padding:2rem 0}
+}
+
+/* === SCROLL PROGRESS === */
+.nav-progress{position:fixed;top:0;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-soft));z-index:1001;transition:width .1s}
+
+/* === NAVIGATION === */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 2.5rem;display:flex;justify-content:space-between;align-items:center;background:rgba(250,248,245,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:all .4s var(--ease)}
+.nav-brand{display:flex;align-items:center;gap:.8rem}
+.nav-logo{font-family:var(--serif);font-size:1rem;font-weight:600;color:var(--text)}
+.nav-tag{font-family:var(--display);font-size:.7rem;letter-spacing:.2em;color:var(--accent);text-transform:uppercase}
+.nav-links{display:flex;gap:1.8rem;list-style:none}
+.nav-links a{font-size:.8rem;color:var(--text-muted);text-decoration:none;letter-spacing:.08em;transition:color .3s}
+.nav-links a:hover{color:var(--accent)}
+
+/* === HERO === */
+.hero{min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:8rem 2rem 6rem;background:linear-gradient(180deg,#f0e8dc 0%,var(--bg) 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;right:-30%;width:800px;height:800px;background:radial-gradient(circle,rgba(201,163,90,.08) 0%,transparent 70%);pointer-events:none}
+.hero-eyebrow{font-family:var(--display);font-size:.9rem;letter-spacing:.4em;color:var(--accent);text-transform:uppercase;margin-bottom:2rem}
+.hero-title{font-family:var(--serif);font-size:clamp(1.8rem,4.5vw,3rem);font-weight:600;color:var(--text);letter-spacing:.06em;line-height:1.6;margin-bottom:1rem}
+.hero-sub{font-family:var(--serif);font-size:clamp(1rem,2vw,1.2rem);color:var(--text-light);letter-spacing:.1em;margin-bottom:2.5rem}
+.hero-meta{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap}
+.hero-meta-item{font-size:.8rem;color:var(--text-muted);letter-spacing:.06em}
+.hero-meta-item strong{color:var(--accent);font-weight:500}
+.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.4rem}
+.hero-scroll span{font-family:var(--display);font-size:.65rem;letter-spacing:.2em;color:var(--text-muted);text-transform:uppercase}
+.hero-scroll-line{width:1px;height:30px;background:var(--accent);opacity:.4;animation:scrollPulse 2s infinite}
+@keyframes scrollPulse{0%,100%{opacity:.2;transform:scaleY(.6);transform-origin:top}50%{opacity:.6;transform:scaleY(1)}}
+
+/* === SECTION === */
+.section{max-width:900px;margin:0 auto;padding:5rem 2rem}
+.section-wide{max-width:1100px}
+.section-label{font-family:var(--display);font-size:.85rem;letter-spacing:.35em;color:var(--accent);text-transform:uppercase;margin-bottom:.6rem}
+.section-num{font-family:var(--display);font-size:2.5rem;font-weight:300;color:var(--accent);opacity:.4;line-height:1;margin-bottom:.3rem}
+.section-title{font-family:var(--serif);font-size:clamp(1.5rem,3.5vw,2rem);font-weight:500;color:var(--text);letter-spacing:.06em;line-height:1.6;margin-bottom:1rem}
+.section-desc{font-size:1rem;color:var(--text-light);max-width:700px;line-height:2.2;margin-bottom:2.5rem}
+.section-divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);max-width:900px;margin:0 auto}
+
+/* === PREMISE GRID === */
+.premise-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem;margin-bottom:2rem}
+.premise-card{padding:1.6rem 1.8rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow)}
+.premise-card-label{font-size:.7rem;letter-spacing:.15em;color:var(--accent);font-weight:500;margin-bottom:.4rem}
+.premise-card-value{font-family:var(--serif);font-size:1.05rem;color:var(--text);font-weight:500;line-height:1.8}
+.premise-card-note{font-size:.85rem;color:var(--text-light);margin-top:.3rem;line-height:1.8}
+
+/* === FLOW === */
+.flow-bar{display:flex;align-items:center;justify-content:center;gap:0;padding:2rem 0;margin:2rem 0;flex-wrap:wrap}
+.flow-item{display:flex;flex-direction:column;align-items:center;text-align:center;padding:1rem 1.2rem;min-width:120px}
+.flow-icon{font-size:1.6rem;margin-bottom:.4rem}
+.flow-text{font-family:var(--serif);font-size:.88rem;font-weight:500;color:var(--text)}
+.flow-sub{font-size:.7rem;color:var(--text-muted);margin-top:.2rem}
+.flow-arrow{font-size:1.2rem;color:var(--accent);opacity:.5;flex-shrink:0}
+
+/* === INSIGHT BOX === */
+.insight{padding:1.8rem 2rem;border-left:3px solid var(--accent);background:rgba(122,92,31,.04);border-radius:0 10px 10px 0;margin:2rem 0}
+.insight p{font-family:var(--serif);font-size:1rem;color:var(--text);line-height:2.2}
+.insight strong{color:var(--accent);font-weight:600}
+
+/* === TABLE === */
+.data-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.92rem}
+.data-table thead{background:rgba(122,92,31,.06)}
+.data-table th{font-family:var(--serif);font-weight:500;color:var(--accent);text-align:left;padding:.9rem 1.2rem;border-bottom:2px solid rgba(122,92,31,.15);font-size:.85rem;letter-spacing:.06em}
+.data-table td{padding:.8rem 1.2rem;border-bottom:1px solid var(--border);color:var(--text-light);vertical-align:top}
+.data-table tr:hover{background:rgba(122,92,31,.02)}
+.data-table .col-num{width:2.5rem;text-align:center;font-family:var(--display);font-size:1rem;color:var(--accent);opacity:.6}
+.data-table .col-action{font-weight:500;color:var(--text)}
+.data-table .badge{display:inline-block;padding:.15rem .6rem;border-radius:20px;font-size:.7rem;letter-spacing:.05em;font-weight:500}
+.badge-save{background:rgba(61,90,128,.1);color:var(--blue)}
+.badge-share{background:rgba(122,92,31,.1);color:var(--accent)}
+.badge-view{background:rgba(45,106,79,.1);color:var(--green)}
+.badge-dm{background:rgba(155,68,68,.1);color:var(--red)}
+.badge-engage{background:rgba(160,120,48,.1);color:var(--accent-light)}
+
+/* === CARD GRID === */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin:2rem 0}
+.card{padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);transition:transform .4s var(--ease),box-shadow .4s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.card-icon{font-size:1.5rem;margin-bottom:.8rem}
+.card h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--text);margin-bottom:.5rem;letter-spacing:.04em}
+.card p{font-size:.9rem;color:var(--text-light);line-height:2}
+.card-list{list-style:none;margin-top:.8rem}
+.card-list li{font-size:.88rem;color:var(--text-light);padding:.35rem 0 .35rem 1.2rem;position:relative;line-height:1.8}
+.card-list li::before{content:'';position:absolute;left:0;top:.75rem;width:5px;height:5px;border:1.5px solid var(--accent-soft);border-radius:50%}
+
+/* === OK/NG COMPARISON === */
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2rem 0}
+.compare-card{padding:1.8rem;border-radius:14px}
+.compare-card.ng{background:rgba(155,68,68,.05);border:1px solid rgba(155,68,68,.12)}
+.compare-card.ok{background:rgba(45,106,79,.05);border:1px solid rgba(45,106,79,.12)}
+.compare-label{font-family:var(--serif);font-size:.85rem;font-weight:600;margin-bottom:.8rem;letter-spacing:.08em}
+.compare-card.ng .compare-label{color:var(--red)}
+.compare-card.ok .compare-label{color:var(--green)}
+.compare-card p{font-size:.9rem;line-height:2;color:var(--text-light)}
+
+/* === PHASE TIMELINE === */
+.phase-track{position:relative;padding-left:2.5rem;margin:2rem 0}
+.phase-track::before{content:'';position:absolute;left:.5rem;top:.5rem;bottom:.5rem;width:2px;background:linear-gradient(to bottom,var(--accent),var(--accent-soft),var(--border))}
+.phase-item{position:relative;margin-bottom:2.5rem}
+.phase-item::before{content:'';position:absolute;left:-2.3rem;top:.3rem;width:12px;height:12px;border-radius:50%;border:2px solid var(--accent);background:var(--bg)}
+.phase-item.active::before{background:var(--accent)}
+.phase-label{font-family:var(--display);font-size:.8rem;letter-spacing:.2em;color:var(--accent);text-transform:uppercase;margin-bottom:.2rem}
+.phase-title{font-family:var(--serif);font-size:1.15rem;font-weight:500;color:var(--text);margin-bottom:.6rem}
+.phase-kpi{display:flex;gap:1.5rem;flex-wrap:wrap;margin:.8rem 0}
+.kpi{padding:.8rem 1.2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:10px;min-width:140px}
+.kpi-label{font-size:.7rem;color:var(--text-muted);letter-spacing:.08em}
+.kpi-value{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--accent)}
+.phase-tasks{list-style:none;margin-top:.5rem}
+.phase-tasks li{font-size:.88rem;color:var(--text-light);padding:.25rem 0 .25rem 1rem;position:relative;line-height:1.9}
+.phase-tasks li::before{content:'\2014';position:absolute;left:0;color:var(--accent-soft);font-size:.7rem}
+
+/* === CHECKLIST === */
+.checklist{list-style:none;margin:1.5rem 0}
+.checklist li{display:grid;grid-template-columns:auto 2.5rem 1fr auto;gap:.8rem;align-items:center;padding:1.1rem 1.2rem;border-bottom:1px solid var(--border);transition:background .3s;cursor:pointer;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+.checklist li:hover{background:rgba(122,92,31,.04)}
+.checklist li:active{background:rgba(122,92,31,.07)}
+.checklist li.done .check-text{text-decoration:line-through;color:var(--text-muted)}
+.check-priority{font-size:.85rem;min-width:3rem}
+.check-priority.high{color:var(--accent);font-weight:700}
+.check-priority.mid{color:var(--accent-light)}
+.check-priority.low{color:var(--text-muted)}
+.check-box{width:24px;height:24px;border:2px solid var(--accent-soft);border-radius:6px;flex-shrink:0;cursor:pointer;transition:all .3s var(--ease);display:flex;align-items:center;justify-content:center;position:relative}
+.check-box.checked{background:var(--accent);border-color:var(--accent);transform:scale(1.1)}
+.check-box.checked::after{content:'\2713';color:#fff;font-size:.85rem;font-weight:700}
+.check-text{font-size:.95rem;color:var(--text);transition:all .3s}
+.check-time{font-size:.78rem;color:var(--text-muted);white-space:nowrap}
+
+/* === STORY RATIO === */
+.ratio-bar{display:flex;height:32px;border-radius:8px;overflow:hidden;margin:1rem 0}
+.ratio-fill{display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:500;letter-spacing:.04em;color:#fff}
+.ratio-sell{background:var(--accent);flex:3}
+.ratio-trust{background:var(--green);flex:7}
+
+/* === FOOTER === */
+.footer{text-align:center;padding:4rem 2rem;border-top:1px solid var(--border)}
+.footer-logo{font-family:var(--serif);font-size:1rem;color:var(--text);letter-spacing:.1em;margin-bottom:.3rem}
+.footer-sub{font-size:.78rem;color:var(--text-muted);letter-spacing:.08em}
+
+/* === MOBILE === */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .nav{padding:.8rem 1.2rem}
+  .hero{padding:6rem 1.5rem 4rem;min-height:60vh}
+  .section{padding:3.5rem 1.2rem}
+  .premise-grid{grid-template-columns:1fr}
+  .compare-grid{grid-template-columns:1fr}
+  .card-grid{grid-template-columns:1fr}
+  .flow-bar{flex-direction:column;gap:.5rem}
+  .flow-arrow{transform:rotate(90deg)}
+  .checklist li{grid-template-columns:auto 1.5rem 1fr;gap:.5rem}
+  .check-time{display:none}
+  .hero-meta{flex-direction:column;gap:.5rem}
+  .data-table{font-size:.82rem}
+  .data-table th,.data-table td{padding:.6rem .8rem}
+  .phase-kpi{gap:.8rem}
+}
+</style>
+</head>
+<body>
+
+<!-- SCROLL PROGRESS -->
+<div class="nav-progress" id="progress"></div>
+
+<!-- NAVIGATION -->
+<nav class="nav">
+  <div class="nav-brand">
+    <span class="nav-logo">Instagram運用戦略</span>
+    <span class="nav-tag">Shimizu Meiboku</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#premise">前提</a></li>
+    <li><a href="#trend">潮流</a></li>
+    <li><a href="#plan">運用プラン</a></li>
+    <li><a href="#growth">成長戦略</a></li>
+    <li><a href="#action">アクション</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div>
+    <p class="hero-eyebrow">Instagram Strategy Report</p>
+    <h1 class="hero-title">清水銘木様<br>Instagram運用戦略レポート</h1>
+    <p class="hero-sub">2026年2月版</p>
+    <div class="hero-meta">
+      <span class="hero-meta-item"><strong>目標</strong> 月10件 → 100件の問い合わせ</span>
+      <span class="hero-meta-item"><strong>戦略</strong> Instagram → HP → LINE → 成約</span>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</header>
+
+<div class="section-divider"></div>
+
+<!-- SECTION 0: PREMISE -->
+<section class="section" id="premise">
+  <div class="section-num">00</div>
+  <p class="section-label">Premise</p>
+  <h2 class="section-title">前提 ホームページの現状確認</h2>
+  <p class="section-desc">清水銘木様のホームページを全ページ確認した結果をまとめました</p>
+
+  <div class="premise-grid">
+    <div class="premise-card">
+      <p class="premise-card-label">事業内容</p>
+      <p class="premise-card-value">天然木テーブル専門店</p>
+      <p class="premise-card-note">山口県防府市 創業70年</p>
+    </div>
+    <div class="premise-card">
+      <p class="premise-card-label">最大の強み</p>
+      <p class="premise-card-value">10年以上の天然乾燥</p>
+      <p class="premise-card-note">1000枚以上の在庫 26種以上の樹種</p>
+    </div>
+    <div class="premise-card">
+      <p class="premise-card-label">差別化要素</p>
+      <p class="premise-card-value">AI生成ビフォーアフター画像</p>
+      <p class="premise-card-note">業界初 競合ゼロの取り組み</p>
+    </div>
+    <div class="premise-card">
+      <p class="premise-card-label">価格帯</p>
+      <p class="premise-card-value">&yen;150,000 ~ &yen;385,000</p>
+      <p class="premise-card-note">サブスク &yen;1,500 ~ &yen;30,000/月</p>
+    </div>
+    <div class="premise-card">
+      <p class="premise-card-label">問い合わせ導線</p>
+      <p class="premise-card-value">LINE / 電話 / ヒアリングシート</p>
+      <p class="premise-card-note">フローティングCTAが常時表示</p>
+    </div>
+    <div class="premise-card">
+      <p class="premise-card-label">Instagram</p>
+      <p class="premise-card-value">@shimizumeiboku_official</p>
+      <p class="premise-card-note">Aboutセクションにリンク設置済み</p>
+    </div>
+  </div>
+
+  <h3 style="font-family:var(--serif);font-size:1.1rem;font-weight:500;margin:2.5rem 0 1rem;letter-spacing:.04em">戦略フロー</h3>
+  <div class="flow-bar">
+    <div class="flow-item">
+      <div class="flow-icon">📷</div>
+      <div class="flow-text">Instagram</div>
+      <div class="flow-sub">認知 興味喚起</div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-item">
+      <div class="flow-icon">🌐</div>
+      <div class="flow-text">ホームページ</div>
+      <div class="flow-sub">信頼構築 詳細確認</div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-item">
+      <div class="flow-icon">💬</div>
+      <div class="flow-text">LINE相談</div>
+      <div class="flow-sub">個別提案 AI画像</div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-item">
+      <div class="flow-icon">🤝</div>
+      <div class="flow-text">直接つながる</div>
+      <div class="flow-sub">成約</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SECTION 1: TREND -->
+<section class="section" id="trend">
+  <div class="section-num">01</div>
+  <p class="section-label">Trend</p>
+  <h2 class="section-title">2026年 Instagramの大きな潮流</h2>
+
+  <div class="insight">
+    <p>AIで誰でも一定品質のコンテンツが作れるようになった結果<br>差別化は<strong>「体験」「想い」「人間性」</strong>でしかできない</p>
+  </div>
+
+  <div class="card-grid" style="margin-top:2rem">
+    <div class="card">
+      <div class="card-icon">🎬</div>
+      <h3>リールが引き続き最重要</h3>
+      <p>リーチの7〜8割はリール経由<br>ただし「バズ狙い」より「保存・シェアされる有益コンテンツ」が評価される時代に</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">💬</div>
+      <h3>DMが最重要評価指標に</h3>
+      <p>2026年のアルゴリズムはDM会話量を最も重視<br>「DMで会話が生まれる投稿」が最も伸びる</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🧪</div>
+      <h3>Trial Reels（テスト機能）</h3>
+      <p>フォロワー以外にだけ表示されるテスト投稿が可能に<br>失敗リスクゼロで新しいネタを試せる</p>
+    </div>
+  </div>
+
+  <div class="insight" style="margin-top:2rem">
+    <p>清水銘木様の<strong>70年の歴史 天然乾燥へのこだわり 木への愛情</strong>こそが最大の武器<br>AIでは作れない「本物のストーリー」を持っている</p>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SECTION 2: PLAN -->
+<section class="section section-wide" id="plan">
+  <div class="section-num">02</div>
+  <p class="section-label">Operation Plan</p>
+  <h2 class="section-title">清水銘木様に特化した<br>Instagram運用プラン</h2>
+
+  <!-- A. ACCOUNT -->
+  <h3 style="font-family:var(--serif);font-size:1.2rem;font-weight:500;margin:3rem 0 1.5rem;color:var(--accent);letter-spacing:.06em">A. アカウント設計（最優先で整える）</h3>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>項目</th><th>具体的なアクション</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-action">アカウント名</td><td>「清水銘木｜あなたの木に出会う」<br>ブランド名 + キャッチコピーの形式</td></tr>
+      <tr><td class="col-action">プロフィール文</td><td>「創業70年 10年以上天然乾燥させた一枚板テーブル専門店 / 写真を送るだけでAI完成イメージをお届け / 山口県防府市」（150文字以内に凝縮）</td></tr>
+      <tr><td class="col-action">プロフィールリンク</td><td>1番目: ホームページ<br>2番目: LINE公式アカウント<br>この2つだけに絞る</td></tr>
+      <tr><td class="col-action">ハイライト</td><td>「ビフォーアフター」「天然乾燥とは」「お客様の声」「納品事例」「倉庫見学」の5つ</td></tr>
+    </tbody>
+  </table>
+
+  <!-- B. CONTENT -->
+  <h3 style="font-family:var(--serif);font-size:1.2rem;font-weight:500;margin:3rem 0 1.5rem;color:var(--accent);letter-spacing:.06em">B. リール戦略 — 最適なネタ20選</h3>
+
+  <p style="font-size:.95rem;color:var(--text-light);margin-bottom:1.5rem;line-height:2">「送りたくなる」「保存したくなる」設計が重要<br>シェアが最も高いアルゴリズム評価を受けます</p>
+
+  <table class="data-table">
+    <thead>
+      <tr><th style="width:2rem">#</th><th>テーマ</th><th style="width:8rem">狙い</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="col-num">1</td><td>10年寝かせた木を初めてカットする瞬間</td><td><span class="badge badge-view">視聴維持</span></td></tr>
+      <tr><td class="col-num">2</td><td>AIビフォーアフター（板 → 完成テーブル）</td><td><span class="badge badge-share">シェア</span></td></tr>
+      <tr><td class="col-num">3</td><td>天然乾燥 vs 機械乾燥の違い（実演）</td><td><span class="badge badge-save">保存</span></td></tr>
+      <tr><td class="col-num">4</td><td>木目を磨くASMR動画</td><td><span class="badge badge-view">フル視聴</span></td></tr>
+      <tr><td class="col-num">5</td><td>1000枚の在庫倉庫ツアー</td><td><span class="badge badge-share">シェア</span></td></tr>
+      <tr><td class="col-num">6</td><td>「あなたの家の木 大丈夫ですか？」啓蒙系</td><td><span class="badge badge-dm">保存+DM</span></td></tr>
+      <tr><td class="col-num">7</td><td>お客様の感動の納品瞬間</td><td><span class="badge badge-engage">共感+シェア</span></td></tr>
+      <tr><td class="col-num">8</td><td>樹齢100年の木の年輪を読み解く</td><td><span class="badge badge-save">保存</span></td></tr>
+      <tr><td class="col-num">9</td><td>赤楠 栃 欅… 木の種類紹介シリーズ</td><td><span class="badge badge-save">保存</span></td></tr>
+      <tr><td class="col-num">10</td><td>「この木の樹齢は？ A:50年 B:100年 C:200年」クイズ</td><td><span class="badge badge-engage">滞在時間</span></td></tr>
+      <tr><td class="col-num">11</td><td>一枚板ができるまで（タイムラプス）</td><td><span class="badge badge-view">フル視聴</span></td></tr>
+      <tr><td class="col-num">12</td><td>倉庫に響く製材の音（ASMR）</td><td><span class="badge badge-view">フル視聴</span></td></tr>
+      <tr><td class="col-num">13</td><td>「同じ木は二度と手に入らない」ストーリー</td><td><span class="badge badge-engage">共感</span></td></tr>
+      <tr><td class="col-num">14</td><td>納品テーブルに家族が初めて座る瞬間</td><td><span class="badge badge-share">シェア</span></td></tr>
+      <tr><td class="col-num">15</td><td>天然木 vs 合板のひっかき比較テスト</td><td><span class="badge badge-save">保存</span></td></tr>
+      <tr><td class="col-num">16</td><td>AI完成イメージが届いたお客様のリアクション</td><td><span class="badge badge-dm">DM誘導</span></td></tr>
+      <tr><td class="col-num">17</td><td>「予算20万円で買える天然木テーブル3選」</td><td><span class="badge badge-save">保存</span></td></tr>
+      <tr><td class="col-num">18</td><td>天然木テーブルのお手入れ方法</td><td><span class="badge badge-save">保存</span></td></tr>
+      <tr><td class="col-num">19</td><td>MEIBOKU BOXの開封（ガチャ要素）</td><td><span class="badge badge-share">シェア</span></td></tr>
+      <tr><td class="col-num">20</td><td>「新しい一枚板入荷まであと3日」カウントダウン</td><td><span class="badge badge-engage">期待+再訪</span></td></tr>
+    </tbody>
+  </table>
+
+  <!-- C. STORIES -->
+  <h3 style="font-family:var(--serif);font-size:1.2rem;font-weight:500;margin:3rem 0 1.5rem;color:var(--accent);letter-spacing:.06em">C. ストーリーズ戦略</h3>
+
+  <div class="insight">
+    <p><strong>重要: ストーリーズの7割は「売らない」内容にする</strong><br>売り込み比率は3割以下に抑える</p>
+  </div>
+
+  <p style="font-size:.85rem;color:var(--text-muted);margin:.8rem 0 .3rem">投稿比率イメージ</p>
+  <div class="ratio-bar">
+    <div class="ratio-fill ratio-sell">30% 販売</div>
+    <div class="ratio-fill ratio-trust">70% 信頼構築</div>
+  </div>
+
+  <div class="card-grid" style="margin-top:1.5rem">
+    <div class="card">
+      <h3>信頼構築コンテンツ（7割）</h3>
+      <ul class="card-list">
+        <li>倉庫の朝 作業の一コマ 木の香りの話</li>
+        <li>木への想い 天然乾燥のこだわり</li>
+        <li>アンケートや質問スタンプで対話</li>
+        <li>日常風景（長押し＝滞在時間UP）</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>販売導線コンテンツ（3割）</h3>
+      <ul class="card-list">
+        <li>新入荷のお知らせ</li>
+        <li>カウントダウン（入荷まであと3日）</li>
+        <li>LINE誘導（プロフィールのLINEから）</li>
+        <li>期間限定オファー</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- D. DM STRATEGY -->
+  <h3 style="font-family:var(--serif);font-size:1.2rem;font-weight:500;margin:3rem 0 1.5rem;color:var(--accent);letter-spacing:.06em">D. DM戦略（2026年最重要）</h3>
+
+  <p style="font-size:.95rem;color:var(--text-light);margin-bottom:1.5rem;line-height:2">2026年のInstagramはDM内の会話量を最も重要な評価指標として扱っています</p>
+
+  <div class="compare-grid">
+    <div class="compare-card ng">
+      <p class="compare-label">NG やってはいけない</p>
+      <p>DMが来た瞬間に商品説明や料金表を送る<br><br>長文セールスを一方的に送りつける</p>
+    </div>
+    <div class="compare-card ok">
+      <p class="compare-label">OK 2026年の正解DM</p>
+      <p>「ありがとうございます！ちなみに どんなお部屋に置きたいとお考えですか？」<br><br>会話を広げてからLINEへ自然に案内</p>
+    </div>
+  </div>
+
+  <!-- E. LINE INTEGRATION -->
+  <h3 style="font-family:var(--serif);font-size:1.2rem;font-weight:500;margin:3rem 0 1.5rem;color:var(--accent);letter-spacing:.06em">E. Instagram → LINE への導線設計</h3>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-icon">📌</div>
+      <h3>プロフィールリンク</h3>
+      <p>「詳細はプロフィールのリンクから」をキャプションに毎回記載</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📖</div>
+      <h3>ハイライト「はじめての方へ」</h3>
+      <p>LINE登録の流れを画像で説明<br>登録への心理的ハードルを下げる</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">💬</div>
+      <h3>DM → LINE の自然な流れ</h3>
+      <p>会話の延長線上で<br>「詳しくはLINEでお送りしますね」と案内</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🎁</div>
+      <h3>LINE登録特典</h3>
+      <p>「LINE登録で天然木テーブルお手入れガイド無料プレゼント」</p>
+    </div>
+  </div>
+
+  <!-- F. TRIAL REELS -->
+  <h3 style="font-family:var(--serif);font-size:1.2rem;font-weight:500;margin:3rem 0 1.5rem;color:var(--accent);letter-spacing:.06em">F. Trial Reels（テスト投稿）の活用</h3>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>Trial Reelsとは</h3>
+      <p>フォロワー以外にだけ表示されるテスト用リール<br>失敗しても既存フォロワーには見られない安心感</p>
+    </div>
+    <div class="card">
+      <h3>活用サイクル</h3>
+      <ul class="card-list">
+        <li>新しい切り口の動画をまずTrialで配信</li>
+        <li>再生維持率が高いものだけ本投稿に採用</li>
+        <li>月に4〜5本のTrialを回してデータ蓄積</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- G. AI UTILIZATION -->
+  <h3 style="font-family:var(--serif);font-size:1.2rem;font-weight:500;margin:3rem 0 1.5rem;color:var(--accent);letter-spacing:.06em">G. AI活用による効率化</h3>
+
+  <div class="compare-grid">
+    <div class="compare-card ok" style="border-color:rgba(122,92,31,.15);background:rgba(122,92,31,.03)">
+      <p class="compare-label" style="color:var(--accent)">AIに任せていい領域</p>
+      <p>投稿ネタ出し キャプション下書き<br>ハッシュタグリサーチ<br>投稿スケジュール管理<br>ビフォーアフター画像生成</p>
+    </div>
+    <div class="compare-card ok" style="border-color:rgba(155,68,68,.12);background:rgba(155,68,68,.03)">
+      <p class="compare-label" style="color:var(--red)">人間がやるべき領域</p>
+      <p>DM対応（感情のある会話）<br>ストーリーズの日常投稿<br>コメント返信<br>木への想いを語るコンテンツ</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SECTION 3: GROWTH -->
+<section class="section" id="growth">
+  <div class="section-num">03</div>
+  <p class="section-label">Growth Strategy</p>
+  <h2 class="section-title">3段階の成長戦略</h2>
+  <p class="section-desc">小さく始めて確実に育てる 12ヶ月のロードマップ</p>
+
+  <div class="phase-track">
+    <div class="phase-item active">
+      <p class="phase-label">Phase 1 — 1〜3ヶ月目</p>
+      <h4 class="phase-title">月10件の問い合わせ</h4>
+      <div class="phase-kpi">
+        <div class="kpi"><p class="kpi-label">フォロワー</p><p class="kpi-value">1,000人</p></div>
+        <div class="kpi"><p class="kpi-label">リール平均再生</p><p class="kpi-value">1,000〜3,000回</p></div>
+        <div class="kpi"><p class="kpi-label">LINE登録</p><p class="kpi-value">月50人</p></div>
+        <div class="kpi"><p class="kpi-label">問い合わせ</p><p class="kpi-value">月10件</p></div>
+      </div>
+      <ul class="phase-tasks">
+        <li>プロフィール最適化 ハイライト整備</li>
+        <li>リール週3投稿の習慣化</li>
+        <li>ストーリーズ毎日投稿</li>
+        <li>Googleビジネスプロフィール最適化</li>
+      </ul>
+    </div>
+
+    <div class="phase-item">
+      <p class="phase-label">Phase 2 — 4〜8ヶ月目</p>
+      <h4 class="phase-title">月30件の問い合わせ</h4>
+      <div class="phase-kpi">
+        <div class="kpi"><p class="kpi-label">フォロワー</p><p class="kpi-value">5,000人</p></div>
+        <div class="kpi"><p class="kpi-label">リール平均再生</p><p class="kpi-value">5,000〜10,000回</p></div>
+        <div class="kpi"><p class="kpi-label">LINE登録</p><p class="kpi-value">月100人</p></div>
+        <div class="kpi"><p class="kpi-label">問い合わせ</p><p class="kpi-value">月30件</p></div>
+      </div>
+      <ul class="phase-tasks">
+        <li>UGC（お客様投稿）の促進と紹介</li>
+        <li>インテリア系インフルエンサーとのコラボ</li>
+        <li>Instagram広告の併用（月5〜10万円目安）</li>
+        <li>MEIBOKU BOX開封レビュー動画シリーズ化</li>
+        <li>Pinterestとの並行運用開始</li>
+      </ul>
+    </div>
+
+    <div class="phase-item">
+      <p class="phase-label">Phase 3 — 9〜12ヶ月目</p>
+      <h4 class="phase-title">月100件の問い合わせ</h4>
+      <div class="phase-kpi">
+        <div class="kpi"><p class="kpi-label">フォロワー</p><p class="kpi-value">10,000人以上</p></div>
+        <div class="kpi"><p class="kpi-label">リール平均再生</p><p class="kpi-value">10,000〜50,000回</p></div>
+        <div class="kpi"><p class="kpi-label">LINE登録</p><p class="kpi-value">月300人</p></div>
+        <div class="kpi"><p class="kpi-label">問い合わせ</p><p class="kpi-value">月100件</p></div>
+      </div>
+      <ul class="phase-tasks">
+        <li>ブランド検索の確立（「清水銘木」で検索される状態）</li>
+        <li>メディア露出 PR施策</li>
+        <li>広告予算の拡大（月15〜30万円）</li>
+        <li>Lステップ導入による流入経路分析</li>
+        <li>法人向け（設計事務所 工務店）への認知拡大</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SECTION 4: ACTION -->
+<section class="section" id="action">
+  <div class="section-num">04</div>
+  <p class="section-label">Action Checklist</p>
+  <h2 class="section-title">今すぐ始めるべきアクション</h2>
+  <p class="section-desc">優先度順のチェックリスト<br>上から順に取り組むことで最短で成果に直結します</p>
+
+  <ul class="checklist" id="checklist">
+    <li>
+      <span class="check-priority high">★★★</span>
+      <div class="check-box"></div>
+      <span class="check-text">プロフィール文 リンクの最適化</span>
+      <span class="check-time">30分</span>
+    </li>
+    <li>
+      <span class="check-priority high">★★★</span>
+      <div class="check-box"></div>
+      <span class="check-text">ハイライト5カテゴリの作成</span>
+      <span class="check-time">2時間</span>
+    </li>
+    <li>
+      <span class="check-priority high">★★★</span>
+      <div class="check-box"></div>
+      <span class="check-text">最初のリール3本を撮影 投稿</span>
+      <span class="check-time">3時間</span>
+    </li>
+    <li>
+      <span class="check-priority high">★★★</span>
+      <div class="check-box"></div>
+      <span class="check-text">LINE登録特典（お手入れガイド）の作成</span>
+      <span class="check-time">2時間</span>
+    </li>
+    <li>
+      <span class="check-priority mid">★★</span>
+      <div class="check-box"></div>
+      <span class="check-text">ストーリーズの毎日投稿を開始</span>
+      <span class="check-time">1日10分</span>
+    </li>
+    <li>
+      <span class="check-priority mid">★★</span>
+      <div class="check-box"></div>
+      <span class="check-text">DM対応マニュアルの整備</span>
+      <span class="check-time">1時間</span>
+    </li>
+    <li>
+      <span class="check-priority mid">★★</span>
+      <div class="check-box"></div>
+      <span class="check-text">Trial Reelsで最初のテスト投稿</span>
+      <span class="check-time">1時間</span>
+    </li>
+    <li>
+      <span class="check-priority low">★</span>
+      <div class="check-box"></div>
+      <span class="check-text">投稿カレンダー（月間）の作成</span>
+      <span class="check-time">1時間</span>
+    </li>
+    <li>
+      <span class="check-priority low">★</span>
+      <div class="check-box"></div>
+      <span class="check-text">Googleビジネスプロフィールの写真追加</span>
+      <span class="check-time">30分</span>
+    </li>
+    <li>
+      <span class="check-priority low">★</span>
+      <div class="check-box"></div>
+      <span class="check-text">Pinterestアカウント開設 初期投稿</span>
+      <span class="check-time">1時間</span>
+    </li>
+  </ul>
+
+  <div class="insight" style="margin-top:2rem">
+    <p>まずは<strong>上の4つ（★★★）を今週中に完了</strong>させることが最優先です<br>この4つだけで問い合わせが動き始める基盤が整います</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p class="footer-logo">清水銘木 Instagram運用戦略レポート</p>
+  <p class="footer-sub">2026年2月版 Confidential</p>
+</footer>
+
+<script>
+// Scroll progress bar
+window.addEventListener('scroll', () => {
+  const h = document.documentElement.scrollHeight - window.innerHeight;
+  const p = (window.scrollY / h) * 100;
+  document.getElementById('progress').style.width = p + '%';
+}, { passive: true });
+
+// Smooth scroll for nav
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+// Checklist — click entire row to toggle
+document.querySelectorAll('.checklist li').forEach(li => {
+  li.addEventListener('click', function() {
+    const box = this.querySelector('.check-box');
+    if (box) {
+      box.classList.toggle('checked');
+      this.classList.toggle('done');
+    }
+  });
+});
+</script>
+</body>
+</html>
